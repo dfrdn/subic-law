@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="hideScrolled"
-    class="flex items-center top-0 left-0 h-20 w-full fixed bg-gray-100 transition-all duration-300 ease-in-out text-gray-900 py-4"
+    class="flex items-center top-0 left-0 h-20 w-full fixed bg-gray-100 transition-all duration-300 ease-in-out text-gray-900 py-4 z-50"
   >
     <div class="flex items-center container justify-between">
       <a href="#hero" class="flex items-center" v-smooth-scroll>
