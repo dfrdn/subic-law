@@ -17,11 +17,11 @@
           <div
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-yellow-300 text-white p-4 md:p-8"
           >
-            <h2
-              class="text-sm md:text-base mb-1 md:mb-4 uppercase tracking-wide"
+            <p
+              class="font-header text-sm md:text-base mb-1 md:mb-4 uppercase tracking-wide"
             >
               Our Experience
-            </h2>
+            </p>
             <p class="text-base md:text-2xl">
               15+ years of Outstanding Legal Service
             </p>
@@ -29,11 +29,11 @@
           <div
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-gray-400 text-white p-4 md:p-8"
           >
-            <h2
-              class="text-base md:text-md mb-1 md:mb-4 uppercase tracking-wide"
+            <p
+              class="font-header text-base md:text-md mb-1 md:mb-4 uppercase tracking-wide"
             >
               Our Services
-            </h2>
+            </p>
             <p class="text-base md:text-2xl">
               Olongapo City and throughout Zambales
             </p>
