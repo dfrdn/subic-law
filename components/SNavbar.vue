@@ -52,25 +52,12 @@
         </div>
       </div>
 
-      <transition
-        enter-class="opacity-0"
-        enter-active-class="ease-out transition-medium"
-        enter-href-class="opacity-100"
-        leave-class="opacity-100"
-        leave-active-class="ease-out transition-medium"
-        leave-href-class="opacity-0"
-      >
+      <transition name="fade">
         <div
           @keydown.esc="isOpen = false"
-          v-show="isOpen"
-          class="z-10 fixed inset-0 opacity-0 transition-opacity"
-        >
-          <div
-            @click="isOpen = false"
-            class="absolute inset-0 bg-black opacity-50"
-            tabindex="0"
-          ></div>
-        </div>
+          v-if="isOpen"
+          class="z-10 fixed inset-0 bg-black opacity-50 transition-opacity"
+        ></div>
       </transition>
 
       <!-- Drawer Menu -->
@@ -237,5 +224,13 @@ nav {
 
 .active {
   @apply border-b border-gray-700;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
