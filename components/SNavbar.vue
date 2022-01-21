@@ -27,7 +27,7 @@
         <!-- Header Logo -->
         <a href="#hero" class="flex items-center" v-smooth-scroll>
           <s-logo />
-          <span class="uppercase font-sans">Subic Law</span>
+          <span class="uppercase font-sans whitespace-nowrap">Subic Law</span>
         </a>
       </div>
 
@@ -36,7 +36,7 @@
         <div class="hidden md:flex justify-between md:items-center">
           <a href="#hero" class="flex items-center" v-smooth-scroll>
             <s-logo />
-            <span class="uppercase font-sans">Subic Law</span>
+            <span class="uppercase font-sans whitespace-nowrap">Subic Law</span>
           </a>
 
           <div class="space-x-3" v-scroll-spy-active v-scroll-spy-link>
@@ -101,11 +101,11 @@
 
         <span
           @click="isOpen = false"
-          class="flex w-full items-center p-4 border-b text-black"
+          class="flex w-full items-center p-4 border-b text-black whitespace-nowrap"
         >
           <a href="#hero" class="w-44">
-            <s-logo class="h-12" />
-            <span class="uppercase font-sans">Subic Law</span>
+            <s-logo class="block" />
+            <span class="uppercase font-sans whitespace-nowrap">Subic Law</span>
           </a>
         </span>
 
