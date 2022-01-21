@@ -3,7 +3,7 @@
     <header id="hero" class="bg-black overflow-hidden relative">
       <div class="lg:w-1/2 h-full absolute z-0 top-0 right-0">
         <img
-          src="https://picsum.photos/400/300"
+          src="~/assets/header.jpg"
           alt=""
           class="w-full h-full object-cover"
         />
@@ -17,20 +17,24 @@
           <div
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-yellow-300 text-white p-4 md:p-8"
           >
-            <p class="text-base md:text-2xl mb-1 md:mb-4 uppercase">
+            <h2
+              class="text-sm md:text-base mb-1 md:mb-4 uppercase tracking-wide"
+            >
               Our Experience
-            </p>
-            <p class="text-base md:text-3xl">
+            </h2>
+            <p class="text-base md:text-2xl">
               15+ years of Outstanding Legal Service
             </p>
           </div>
           <div
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-gray-400 text-white p-4 md:p-8"
           >
-            <p class="text-base md:text-2xl mb-1 md:mb-4 uppercase">
+            <h2
+              class="text-base md:text-md mb-1 md:mb-4 uppercase tracking-wide"
+            >
               Our Services
-            </p>
-            <p class="text-base md:text-3xl">
+            </h2>
+            <p class="text-base md:text-2xl">
               Olongapo City and throughout Zambales
             </p>
           </div>
@@ -38,8 +42,10 @@
         <div
           class="flex flex-col text-center space-y-2 justify-center md:text-left mt-8 md:mt-0 order-1 md:order-2 bg-white col-span-1 md:col-span-4 md:row-span-2 p-8 md:h-3/4"
         >
-          <p class="font-bold text-2xl md:text-5xl">We are here to help you</p>
-          <p class="text-base md:text-4xl leading-relaxed">
+          <h1 class="font-bold text-4xl md:text-5xl">
+            We are here to help you
+          </h1>
+          <p class="text-base md:text-3xl leading-relaxed">
             As one of the leading law firms in Olongapo City, our attorneys can
             help you with all of your legal needs
           </p>
