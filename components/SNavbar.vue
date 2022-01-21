@@ -5,7 +5,7 @@
   >
     <div class="flex items-center container justify-between">
       <div
-        class="grid grid-cols-3 justify-items-center place-items-center place-content-center md:hidden"
+        class="flex-grow grid grid-cols-3 justify-items-center place-items-center place-content-center md:hidden"
       >
         <!-- Mobile Toggle -->
         <div class="md:hidden justify-self-start flex">
@@ -27,7 +27,6 @@
         <!-- Header Logo -->
         <a href="#hero" class="flex items-center" v-smooth-scroll>
           <s-logo />
-          <span class="uppercase font-sans whitespace-nowrap">Subic Law</span>
         </a>
       </div>
 
@@ -65,7 +64,7 @@
         <div
           @keydown.esc="isOpen = false"
           v-show="isOpen"
-          class="z-10 fixed inset-0 transition-opacity"
+          class="z-10 fixed inset-0 opacity-0 transition-opacity"
         >
           <div
             @click="isOpen = false"
@@ -110,10 +109,6 @@
         </span>
 
         <ul class="tracking-wider text-black text-lg" @click="isOpen = false">
-          <a :href="links[0].link" class="block border-t py-4">
-            {{ links[0].label }}
-          </a>
-
           <a
             v-for="link in links"
             :key="link.label"
