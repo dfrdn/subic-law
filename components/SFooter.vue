@@ -1,34 +1,56 @@
 <template>
-  <footer
-    class="text-white bg-gray-900 flex flex-col py-12 items-center text-gray-900-light justify-center text-sm tracking-wide space-y-8"
-  >
+  <footer class="bg-primary w-full">
     <div
-      class="container flex flex-col space-y-4 lg:space-y-0 lg:flex-row items-stretch lg:items-start justify-center lg:justify-between"
+      class="container py-10 grid md:grid-cols-3 gap-10 grid-cols-1 px-5 xl:px-0"
     >
-      <div class="w-full lg:w-1/5 space-y-4">
-        <div class="flex">
-          <s-logo />
-          <span class="font-bold text-3xl tracking-tight">Subic Law</span>
-        </div>
-        <h2>
-          <a :href="`mailto:${content.email}`">{{ content.email }}</a>
-        </h2>
-        <div class="flex space-x-4"></div>
+      <div class="flex flex-col text-white">
+        <h3>Subic Law</h3>
+        <p>
+          Subic Law is one of the leading law firms in Olongapo City, our
+          attorneys can help you with all of your legal needs. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut ero labore et dolore magna aliqua.
+        </p>
       </div>
-      <div class="w-full lg:w-1/5 space-y-4 flex flex-col"></div>
-      <div class="w-full lg:w-3/5 py-4 lg:py-0">
-        <p class="leading-loose">{{ content.disclaimer }}</p>
+      <div class="flex flex-col text-white">
+        <h3>Connect with Us</h3>
+        <div class="space-y-2">
+          <div>
+            <a href="mailto:subiclaw@gmail.com">
+              <email-icon class="pr-2 inline" />
+              subiclaw@gmail.com</a
+            >
+          </div>
+          <div>
+            <a href="tel:(047)223-1003"
+              ><phone-icon class="pr-2 inline" />(047) 223-1003</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.google.com/maps?ll=14.830737,120.280602&z=9&t=m&hl=en&gl=PH&mapclient=embed&cid=8394492565729236242"
+              ><location-icon class="pr-2 inline" />Unit 7-C, 3rd Floor, RM
+              Centrepoint Bldg., Lot 2995 Corner Magsaysay Drive, East Tapinac,
+              Olongapo City
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="container flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between"
-    >
-      <div>
-        <p class="">&copy; {{ new Date().getFullYear() }} Subic Law</p>
-      </div>
+    <div class="w-full bg-tertiary text-primary py-2">
       <div
-        class="flex flex-col md:flex-row md:space-x-10 space-y-4 md:space-y-0"
-      ></div>
+        class="container flex flex-col md:flex-row justify-between items-center px-5 xl:px-0"
+      >
+        <p id="copyright" class="text-white order-1 md:order-0">
+          All Rights Reserved | Subic Law
+          {{ new Date().getFullYear() }}
+        </p>
+        <div class="flex space-x-2 order-0 md:order-1">
+          <a href="https://www.facebook.com/"
+            ><facebook-icon class="primary"
+          /></a>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -48,5 +70,17 @@ export default Vue.extend({
 <style scoped>
 footer {
   min-height: 80px;
+}
+
+h3 {
+  @apply uppercase text-white md:text-lg font-bold mb-2;
+}
+
+p {
+  @apply text-sm md:text-base;
+}
+
+#copyright {
+  @apply text-xs;
 }
 </style>
