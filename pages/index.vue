@@ -1,29 +1,57 @@
 <template>
   <div>
-    <header id="hero" class="bg-gray-100 overflow-hidden relative">
-      <div class="w-full lg:w-1/2 absolute z-0">
-        <img src="https://picsum.photos/400/300" alt="" class="w-full" />
+    <header id="hero" class="bg-black overflow-hidden relative">
+      <div class="lg:w-1/2 h-full absolute z-0 top-0 right-0">
+        <img
+          src="https://picsum.photos/400/300"
+          alt=""
+          class="w-full h-full object-cover"
+        />
       </div>
       <div
-        class="flex flex-col md:grid grid-flow md:grid-flow-row lg:grid-cols-6 grid-rows-5 gap-10 container relative md:p-16 lg:p-28"
+        class="grid grid-flow-col md:grid-flow-row grid-cols-1 lg:grid-cols-6 grid-rows-3 lg:grid-rows-4 md:gap-10 container relative md:p-16 gap-y-10 lg:p-28"
       >
-        <div class="bg-white col-span-1 md:col-span-2 row-span-2 p-8">
-          <h3>LOREM IPSUM DOLOR AMET CONSECTETUER</h3>
-          <p>by Name Surname</p>
+        <div
+          class="row-start-3 md:row-start-auto order-2 md:order-1 grid grid-cols-12 md:grid-cols-2 gap-4 md:gap-10 col-span-4"
+        >
+          <div
+            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-yellow-300 text-white p-4 md:p-8"
+          >
+            <p class="text-base md:text-2xl mb-1 md:mb-4 uppercase">
+              Our Experience
+            </p>
+            <p class="text-base md:text-3xl">
+              15+ years of Outstanding Legal Service
+            </p>
+          </div>
+          <div
+            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-gray-400 text-white p-4 md:p-8"
+          >
+            <p class="text-base md:text-2xl mb-1 md:mb-4 uppercase">
+              Our Services
+            </p>
+            <p class="text-base md:text-3xl">
+              Olongapo City and throughout Zambales
+            </p>
+          </div>
         </div>
-        <div class="bg-white col-span-1 md:col-span-2 row-span-2 p-8">
-          <h3>LOREM IPSUM DOLOR AMET CONSECTETUER</h3>
-          <p>by Name Surname</p>
-        </div>
-        <div class="bg-white col-span-1 md:col-span-4 row-span-3 p-8">
-          <h2>We are here to help you</h2>
-          <p class="text-xl">
-            Based in Olongapo City, we have 11 yrs of legal experience in legal
-            matters
+        <div
+          class="flex flex-col text-center space-y-2 justify-center md:text-left mt-8 md:mt-0 order-1 md:order-2 bg-white col-span-1 md:col-span-4 md:row-span-2 p-8 md:h-3/4"
+        >
+          <p class="font-bold text-2xl md:text-5xl">We are here to help you</p>
+          <p class="text-base md:text-4xl leading-relaxed">
+            As one of the leading law firms in Olongapo City, our attorneys can
+            help you with all of your legal needs
           </p>
         </div>
-        <div class="col-span-4 lg:col-span-2 lg:justify-self-end">
-          <a href="#about" v-smooth-scroll class="flex">
+        <div
+          class="backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-black bg-opacity-30 md:bg-transparent row-start-5 md:row-start-auto order-3 md:col-span-6 text-white py-4 md:py-0"
+        >
+          <a
+            href="#about"
+            v-smooth-scroll
+            class="flex justify-center md:justify-start"
+          >
             <span class="mr-8">Learn more about Subic Law</span>
             <span class="animate-pulse"
               ><svg
