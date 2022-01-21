@@ -9,10 +9,10 @@
         />
       </div>
       <div
-        class="grid grid-flow-col md:grid-flow-row grid-cols-1 lg:grid-cols-6 grid-rows-3 lg:grid-rows-4 md:gap-10 container relative md:p-16 gap-y-10 lg:p-28"
+        class="grid grid-flow-col md:grid-flow-row grid-cols-1 lg:grid-cols-6 grid-rows-2 gap-y-10 lg:grid-rows-3 md:gap-10 container relative md:p-16 lg:p-28"
       >
         <div
-          class="row-start-3 md:row-start-auto order-2 md:order-1 grid grid-cols-12 md:grid-cols-2 gap-4 md:gap-10 col-span-4"
+          class="mt-10 row-start-2 md:row-start-auto order-2 md:order-1 grid grid-cols-12 md:grid-cols-2 gap-4 md:gap-10 col-span-4 row-span-1 md:row-span-1"
         >
           <div
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-yellow-300 text-white p-4 md:p-8"
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col text-center space-y-2 justify-center md:text-left mt-8 md:mt-0 order-1 md:order-2 bg-white col-span-1 md:col-span-4 md:row-span-2 p-8 md:h-3/4"
+          class="flex flex-col text-center space-y-2 justify-center md:text-left mt-8 md:mt-0 order-1 md:order-2 bg-white col-span-1 md:col-span-4 md:row-span-2 p-8 h-2/3 md:h-3/4"
         >
           <p class="font-bold text-2xl md:text-5xl">We are here to help you</p>
           <p class="text-base md:text-4xl leading-relaxed">
@@ -45,7 +45,7 @@
           </p>
         </div>
         <div
-          class="backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-black bg-opacity-30 md:bg-transparent row-start-5 md:row-start-auto order-3 md:col-span-6 text-white py-4 md:py-0"
+          class="backdrop-filter backdrop-blur-md md:backdrop-blur-none bg-black bg-opacity-30 md:bg-transparent row-start-3 md:row-start-4 order-3 md:col-span-6 text-white py-4 md:py-0"
         >
           <a
             href="#about"
