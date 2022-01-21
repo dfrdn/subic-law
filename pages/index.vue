@@ -44,7 +44,7 @@
         </div>
       </div>
     </header>
-    <div v-scroll-spy>
+    <div v-scroll-spy="{ allowNoActive: true }">
       <section id="about">
         <div class="container grid md:grid-cols-2 gap-6">
           <div class="space-y-8">
