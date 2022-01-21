@@ -1,28 +1,28 @@
 <template>
   <div>
     <header id="hero" class="bg-gray-100 overflow-hidden relative">
-      <div class="w-1/2 absolute z-0">
+      <div class="w-full lg:w-1/2 absolute z-0">
         <img src="https://picsum.photos/400/300" alt="" class="w-full" />
       </div>
       <div
-        class="grid grid-flow-row grid-cols-6 grid-rows-5 gap-10 container relative p-28"
+        class="flex flex-col md:grid grid-flow md:grid-flow-row lg:grid-cols-6 grid-rows-5 gap-10 container relative md:p-16 lg:p-28"
       >
-        <div class="bg-white col-span-2 row-span-2 p-8">
+        <div class="bg-white col-span-1 md:col-span-2 row-span-2 p-8">
           <h3>LOREM IPSUM DOLOR AMET CONSECTETUER</h3>
           <p>by Name Surname</p>
         </div>
-        <div class="bg-white col-span-2 row-span-2 p-8">
+        <div class="bg-white col-span-1 md:col-span-2 row-span-2 p-8">
           <h3>LOREM IPSUM DOLOR AMET CONSECTETUER</h3>
           <p>by Name Surname</p>
         </div>
-        <div class="bg-white col-span-4 row-span-3 p-8">
+        <div class="bg-white col-span-1 md:col-span-4 row-span-3 p-8">
           <h2>We are here to help you</h2>
           <p class="text-xl">
             Based in Olongapo City, we have 11 yrs of legal experience in legal
             matters
           </p>
         </div>
-        <div class="col-span-2 justify-self-end">
+        <div class="col-span-4 lg:col-span-2 lg:justify-self-end">
           <a href="#about" v-smooth-scroll class="flex">
             <span class="mr-8">Learn more about Subic Law</span>
             <span class="animate-pulse"
