@@ -25,9 +25,9 @@ module.exports = {
         102: '1.02',
       },
       colors: {
-        primary: '#243467',
-        secondary: '#C59B27',
-        tertiary: '#101010',
+        primary: '#101010',
+        secondary: '#606060',
+        tertiary: '#B37D4A',
       },
     },
   },
