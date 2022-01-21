@@ -1,11 +1,11 @@
 <template>
   <div>
     <header id="hero" class="bg-black overflow-hidden relative">
-      <div class="lg:w-1/2 h-full absolute z-0 top-0 right-0">
+      <div class="lg:w-1/2 h-full absolute z-0 top-0 right-0 flex items-end">
         <img
           src="~/assets/header.jpg"
           alt=""
-          class="w-full h-full object-cover"
+          class="h-5/6 md:h-full object-cover object-center-bottom md:object-center"
         />
       </div>
       <div
