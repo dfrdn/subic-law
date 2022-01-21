@@ -101,7 +101,7 @@ nav {
 }
 
 .scrolled {
-  @apply h-10;
+  @apply h-10 shadow;
 }
 
 .active {
