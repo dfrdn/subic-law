@@ -109,10 +109,6 @@
         </span>
 
         <ul class="tracking-wider text-black text-lg" @click="isOpen = false">
-          <a :href="links[0].link" class="block border-t py-4">
-            {{ links[0].label }}
-          </a>
-
           <a
             v-for="link in links"
             :key="link.label"
