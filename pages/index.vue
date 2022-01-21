@@ -9,7 +9,7 @@
         />
       </div>
       <div
-        class="grid grid-flow-col md:grid-flow-row grid-cols-1 lg:grid-cols-6 grid-rows-3 lg:grid-rows-5 md:gap-10 container relative md:p-16 gap-y-10 lg:p-28"
+        class="grid grid-flow-col md:grid-flow-row grid-cols-1 lg:grid-cols-6 grid-rows-3 lg:grid-rows-4 md:gap-10 container relative md:p-16 gap-y-10 lg:p-28"
       >
         <div
           class="row-start-3 md:row-start-auto order-2 md:order-1 grid grid-cols-12 md:grid-cols-2 gap-4 md:gap-10 col-span-4"
@@ -45,7 +45,7 @@
           </p>
         </div>
         <div
-          class="backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-black bg-opacity-30 md:bg-none row-start-5 md:row-start-auto order-3 md:col-span-6 text-white py-4 md:py-0"
+          class="backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-black bg-opacity-30 md:bg-transparent row-start-5 md:row-start-auto order-3 md:col-span-6 text-white py-4 md:py-0"
         >
           <a
             href="#about"
