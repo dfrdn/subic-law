@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="hideScrolled"
-    class="flex items-center top-0 left-0 h-20 w-full fixed bg-gray-100 transition-all duration-300 ease-in-out text-gray-900 py-4 z-10"
+    class="flex items-center top-0 left-0 h-20 w-full fixed bg-gray-100 transition-all duration-75 text-gray-900 py-4 z-10"
   >
     <div class="flex items-center container justify-between">
       <div
@@ -52,7 +52,6 @@
         </div>
       </div>
 
-      <!-- Dark Background Transition -->
       <transition
         enter-class="opacity-0"
         enter-active-class="ease-out transition-medium"
@@ -190,6 +189,11 @@ export default Vue.extend({
         }
       },
     },
+  },
+  mounted() {
+    document.addEventListener('keydown', (e) => {
+      if (e.keyCode == 27 && this.isOpen) this.isOpen = false
+    })
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
