@@ -3,8 +3,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'arial'],
-      header: ['Georgia'],
+      sans: ['Arial', 'ui-sans-serif', 'system-ui', 'arial'],
+      header: [
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+      ],
     },
     extend: {
       boxShadow: {
