@@ -4,12 +4,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Georgia', 'ui-serif', 'Cambria', 'Times New Roman', 'Times',
-    'serif';
+  font-family: 'PT Serif', 'serif', 'Georgia', 'Cambria', 'Times New Roman',
+    'Times';
 }
 
 p,
 a,
 span {
-  font-family: 'Arial', 'ui-sans-serif', 'system-ui', 'arial';
+  font-family: 'Open Sans', 'sans-serif', 'ui-sans-serif', 'system-ui', 'arial';
 }

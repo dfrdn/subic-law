@@ -15,10 +15,10 @@
           class="mt-10 row-start-2 md:row-start-auto order-2 md:order-1 grid grid-cols-12 md:grid-cols-2 gap-4 md:gap-10 col-span-4 row-span-1 md:row-span-1"
         >
           <div
-            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-yellow-300 text-white p-4 md:p-8"
+            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-tertiary text-white p-4 md:p-8"
           >
             <p
-              class="font-header text-sm md:text-base mb-1 md:mb-4 uppercase tracking-wide"
+              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wide"
             >
               Our Experience
             </p>
@@ -27,12 +27,12 @@
             </p>
           </div>
           <div
-            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-gray-400 text-white p-4 md:p-8"
+            class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-secondary text-white p-4 md:p-8"
           >
             <p
-              class="font-header text-base md:text-md mb-1 md:mb-4 uppercase tracking-wide"
+              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wide"
             >
-              Our Services
+              Our Service Locations
             </p>
             <p class="text-base md:text-2xl">
               Olongapo City and throughout Zambales
@@ -120,11 +120,12 @@
           <h2>Our Lawyers</h2>
           <div class="space-y-4">
             <div
-              v-for="n in 4"
-              :key="n"
+              v-for="lawyer in content.lawyers"
+              :key="lawyer.name"
               class="grid grid-cols-1 md:grid-cols-3"
             >
               <div class="flex items-center justify-center overflow-hidden">
+                <!-- Add dynamic Lawyer Image Here -->
                 <img
                   src="https://picsum.photos/600/300"
                   alt=""
@@ -132,8 +133,11 @@
                 />
               </div>
               <div class="bg-gray-200 col-span-2 flex flex-col p-4 md:p-6">
-                <h3>Name</h3>
-                <p>Bio</p>
+                <h3>{{ lawyer.name }}</h3>
+                <p>{{ lawyer.description }}</p>
+                <div>
+                  <span><phone-icon /> {{ lawyer.phone }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -141,18 +145,22 @@
       </section>
       <section id="practice-areas" class="container">
         <h2>Practice Areas</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="bg-black text-white" v-for="n in 8" :key="n">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div
+            class="bg-black text-white"
+            v-for="practice in content.practiceAreas"
+            :key="practice.title"
+          >
             <div
-              class="absolute md:relative h-60 p-6 bg-gray-500 bg-opacity-50 md:bg-black md:bg-opacity-100"
+              class="absolute md:relative h-32 p-6 bg-gray-500 bg-opacity-50 md:bg-black md:bg-opacity-100"
             >
-              <h3>Practice</h3>
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim.
-              </p>
+              <h3 class="">{{ practice.title }}</h3>
+              <!-- <p>
+                {{ practice.description }}
+              </p> -->
             </div>
             <div class="flex items-center justify-center overflow-hidden h-60">
+              <!-- Add dynamic practice Area Image Here -->
               <img
                 src="https://picsum.photos/600/300"
                 alt=""
@@ -163,20 +171,89 @@
         </div>
       </section>
       <section id="contact" class="container grid md:grid-cols-2 gap-10">
-        <div class="border-2 border-black flex order-2 md:order-1">
+        <div class="border-2 border-secondary flex order-2 md:order-1">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494282.9295284363!2d120.39201175464098!3d14.565686587139465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396711bdd902c49%3A0x747f3a8339f2d512!2sAttys.%20ZC%20Mendoza%2C%20Jr.%2C%20AR%20Orozco%2C%20FJ%20Abdon!5e0!3m2!1sen!2sph!4v1642689800195!5m2!1sen!2sph"
-            height="450"
-            style="border: 0"
+            style="border: 0px"
             allowfullscreen=""
             loading="lazy"
-            class="w-full"
+            class="w-full border"
           ></iframe>
         </div>
         <div class="order-1 md:order-2">
           <h2>Get in Touch</h2>
-          <p>LOREM IPSUM DOLOR AMET CONSECTETUER</p>
-          <p>LOREM IPSUM DOLOR AMET CONSECTETUER</p>
+          <form class="w-full max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  First Name
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder="Jane"
+                />
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-last-name"
+                >
+                  Last Name
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-last-name"
+                  type="text"
+                  placeholder="Doe"
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-password"
+                >
+                  E-mail
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="email"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-password"
+                >
+                  Message
+                </label>
+                <textarea
+                  class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  id="message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="md:flex md:items-center">
+              <div class="md:w-1/3">
+                <button
+                  class="shadow bg-primary hover:bg-tertiary focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                  type="button"
+                >
+                  Send
+                </button>
+              </div>
+              <div class="md:w-2/3"></div>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -185,9 +262,90 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import PhoneIcon from '~/components/icons/PhoneIcon.vue'
 
 export default Vue.extend({
+  components: { PhoneIcon },
   name: 'IndexPage',
+  data() {
+    return {
+      content: {
+        practiceAreas: [
+          {
+            title: 'Settlement of Estate, Housing, and Land Use',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+          {
+            title: 'Civil and Family Law',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+          {
+            title: 'Corporate Housekeeping',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+          {
+            title: 'Government Law',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+          {
+            title: 'Contract Drafting and Review',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+          {
+            title: 'Criminal',
+            description: 'LOREM IPSUM',
+            image: '',
+          },
+        ],
+        lawyers: [
+          {
+            name: 'Atty. Zosimo C. Mendoza, Jr.',
+            image: '',
+            position: 'Partner',
+            description:
+              'Atty. Mendoza earned his AB (Philosophy) from Ateneo de Manila University, his law education from the Ateneo de Manila School of Law and Arellano Law Foundation.  He passed the Bar in 1993.  He also has a Master’s Degree in Business Administration (Ateneo-Regis MBA Program).  Before he became active in private law practice, he worked in the government, in particular, the Subic Bay Metropolitan Authority (SBMA) in 1996 and later in the Light Rail Transit Authority (LRTA). He worked in LRTA as Corporate Secretary, Department Manager, Bids and Awards Committee Chairman, and OIC-Administrator from 2001-2005. Outside of government, he was appointed Corporate Secretary of Subic Bay Marine and Exploratorium, Inc. (SBMEI) for eight years.',
+            phone: '',
+            facebook: '',
+            website: '',
+          },
+          {
+            name: 'Atty. Frank John S. Abdon',
+            image: '',
+            position: 'Associate',
+            description:
+              'Atty. Abdon is engaged in general law practice and has been working at the Z.C. Mendoza Law Office since January 2008 where he gained extensive experience and expertise in the field of litigation which include appearing in different courts in Central Luzon and Metro Manila.  He graduated from the Ateneo de Manila University in the year 2001 with a degree of Bachelor of Arts, Major in Political Science and completed his Juris Doctor degree from the Ateneo de Manila University School of Law in the year 2006.  He was a Legal Consultant for the City Government of Olongapo from September 2008 until June 2013 where he was assigned to perform tasks given by the City Legal Office.  In 2008, he became a part-time instructor at Columban College, Inc., Olongapo City, where he teaches business law subjects up to the present.',
+            phone: '',
+            facebook: '',
+            website: '',
+          },
+          {
+            name: 'Atty. Orozco',
+            image: '',
+            position: 'Associate',
+            description: '',
+            phone: '',
+            facebook: '',
+            website: '',
+          },
+          {
+            name: 'Atty. Daniel John A. Fordan',
+            image: '',
+            position: 'Associate',
+            description:
+              'Atty. Fordan obtained his Juris Doctor degree (with honors) from the Ateneo de Manila University School of Law in 2018. Prior to going into the legal field, he worked as a software engineer after he graduated from the Ateneo de Manila University in 2013 with a degree of BS Computer Science. He was admitted to the Philippine Bar in 2019 where he ranked 4th in the Bar Exams. He previously worked at Gulapa Law, an Ortigas-based law firm where he handled special projects, general corporate, and intellectual property matters. In particular, he served as assistant corporate secretary in a technology company, a real estate company, and a holding company, advising in various legal issues and assisting in stockholders’ and directors’ meeting and compliance with reportorial requirements of the Securities and Exchange Commission. He also handles matters involving due diligence, data privacy, intellectual property, and public-private partnerships.',
+            phone: '',
+            facebook: '',
+            website: '',
+          },
+        ],
+      },
+    }
+  },
 })
 </script>
 

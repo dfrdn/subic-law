@@ -3,14 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Arial', 'ui-sans-serif', 'system-ui', 'arial'],
+      sans: ['Open Sans', 'sans-serif', 'ui-sans-serif', 'system-ui', 'arial'],
       header: [
-        'ui-serif',
+        'PT Serif',
+        'serif',
         'Georgia',
         'Cambria',
         'Times New Roman',
         'Times',
-        'serif',
       ],
     },
     extend: {
