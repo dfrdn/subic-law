@@ -78,21 +78,27 @@
         </div>
       </div>
     </header>
-    <div v-scroll-spy="{ allowNoActive: true }">
+    <div v-scroll-spy="{ allowNoActive: true }" class="px-5 lg:px-0">
       <section id="about">
-        <div class="container grid md:grid-cols-2 gap-6">
+        <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-8">
             <div>
-              <h2>About Subic Law</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut ero labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                poriti laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in uienply voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat norin proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+              <h2>About the Firm</h2>
+              <p class="text-lg">
+                Subic Law has been engaged in general law practice for more than
+                fifteen years. It has developed extensive experience and
+                expertise in court litigation involving a variety of legal
+                issues, notably land and property disputes, criminal, corporate,
+                civil and family law, government law, obligations and contracts,
+                settlement of estate and housing and land use.<br />
+                <br />
+              </p>
+
+              <p class="text-lg">
+                Included in its service are corporate housekeeping, facilitating
+                commercial transactions (local and international), contract
+                drafting and review, company incorporation and business
+                compliance.
               </p>
             </div>
             <div
@@ -105,11 +111,12 @@
             <div class="flex items-center justify-center overflow-hidden">
               <img src="https://picsum.photos/600/300" alt="" class="w-full" />
             </div>
-            <div class="bg-black flex-grow flex items-center p-4">
-              <p class="text-white italic">
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                do eiusmod tempor incididunt ut ero labore et dolore magna
-                aliqua. Ut enim ad minim veniam."
+            <div
+              class="border border-tertiary bg-black flex-grow flex items-center p-4"
+            >
+              <p class="text-white text-xl text-center italic">
+                "We treat each case with the utmost care and the full extent of
+                our legal expertise"
               </p>
             </div>
           </div>
@@ -118,25 +125,41 @@
       <section id="lawyers" class="container">
         <div>
           <h2>Our Lawyers</h2>
-          <div class="space-y-4">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center"
+          >
             <div
               v-for="lawyer in content.lawyers"
               :key="lawyer.name"
-              class="grid grid-cols-1 md:grid-cols-3"
+              class="flex justify-center"
             >
-              <div class="flex items-center justify-center overflow-hidden">
-                <!-- Add dynamic Lawyer Image Here -->
-                <img
-                  src="https://picsum.photos/600/300"
-                  alt=""
-                  class="w-full"
-                />
-              </div>
-              <div class="bg-gray-200 col-span-2 flex flex-col p-4 md:p-6">
-                <h3>{{ lawyer.name }}</h3>
-                <p>{{ lawyer.description }}</p>
-                <div>
-                  <span><phone-icon /> {{ lawyer.phone }}</span>
+              <div
+                class="bg-gray-200 flex flex-col md:px-20 md:py-10 w-100 p-5 profile"
+              >
+                <div class="flex items-center">
+                  <div
+                    class="overflow-hidden rounded-full w-20 h-20 md:w-32 md:h-32 inline mr-4"
+                  >
+                    <!-- Add dynamic Lawyer Image Here -->
+                    <img
+                      src="https://picsum.photos/600/300"
+                      alt=""
+                      class="w-auto h-full rounded-full inline mx-auto"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="text-lg my-0">{{ lawyer.name }}</h3>
+                    <p class="text-base lg:text-xl italic font-semibold">
+                      {{ lawyer.position }}
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-4 flex-grow">{{ lawyer.description }}</p>
+                <div class="mt-4">
+                  <span class="text-tertiary"
+                    ><phone-icon /> {{ lawyer.phone }}</span
+                  >
                 </div>
               </div>
             </div>
@@ -234,7 +257,7 @@
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   for="grid-password"
                 >
-                  Message
+                  Describe Your Legal Concern
                 </label>
                 <textarea
                   class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
@@ -243,9 +266,9 @@
               </div>
             </div>
             <div class="md:flex md:items-center">
-              <div class="md:w-1/3">
+              <div class="flex md:w-1/3 justify-center lg:justify-start">
                 <button
-                  class="shadow bg-primary hover:bg-tertiary focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                  class="shadow bg-primary hover:bg-tertiary focus:shadow-outline focus:outline-none text-white font-bold py-2 md:px-4 px-12 rounded"
                   type="button"
                 >
                   Send
@@ -327,7 +350,8 @@ export default Vue.extend({
             name: 'Atty. Orozco',
             image: '',
             position: 'Associate',
-            description: '',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
             phone: '',
             facebook: '',
             website: '',
@@ -359,6 +383,16 @@ h2 {
 }
 
 h3 {
-  @apply text-2xl font-bold mb-4;
+  @apply font-bold;
+}
+
+.profile {
+  height: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .profile {
+    height: 650px;
+  }
 }
 </style>
