@@ -35,7 +35,9 @@
         <div class="hidden md:flex justify-between md:items-center">
           <a href="#hero" class="flex items-center" v-smooth-scroll>
             <s-logo />
-            <span class="uppercase font-sans whitespace-nowrap">Subic Law</span>
+            <span class="uppercase font-header font-bold whitespace-nowrap"
+              >Subic Law</span
+            >
           </a>
 
           <div class="space-x-3" v-scroll-spy-active v-scroll-spy-link>
