@@ -1,15 +1,14 @@
 <template>
   <footer class="bg-primary w-full">
     <div
-      class="container py-10 grid md:grid-cols-3 gap-10 grid-cols-1 px-5 xl:px-0"
+      class="container py-10 grid md:grid-cols-3 gap-32 grid-cols-1 px-5 xl:px-0"
     >
       <div class="flex flex-col text-white">
         <h3>Subic Law</h3>
         <p>
           Subic Law is one of the leading law firms in Olongapo City, our
-          attorneys can help you with all of your legal needs. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut ero labore et dolore magna aliqua.
+          attorneys can help you with all of your legal needs. The firm has been
+          engaged in general law practice for more than 15 years.
         </p>
       </div>
       <div class="flex flex-col text-white">
