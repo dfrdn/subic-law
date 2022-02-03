@@ -18,7 +18,7 @@
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-tertiary text-white p-4 md:p-8"
           >
             <p
-              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wide"
+              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wider"
             >
               Our Experience
             </p>
@@ -30,7 +30,7 @@
             class="col-start-2 col-span-9 md:col-span-1 md:col-start-auto border border-secondary text-white p-4 md:p-8"
           >
             <p
-              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wide"
+              class="font-header font-bold text-xs md:text-sm mb-1 md:mb-4 uppercase tracking-wider"
             >
               Our Service Locations
             </p>
@@ -175,18 +175,23 @@
             :key="practice.title"
           >
             <div
-              class="absolute md:relative h-32 p-6 bg-gray-500 bg-opacity-50 md:bg-black md:bg-opacity-100"
+              class="absolute md:relative h-32 p-6 md:bg-black md:bg-opacity-100 z-30"
             >
-              <h3 class="">{{ practice.title }}</h3>
+              <h3 class="lg:text-2xl text-xl">{{ practice.title }}</h3>
               <!-- <p>
                 {{ practice.description }}
               </p> -->
             </div>
-            <div class="flex items-center justify-center overflow-hidden h-60">
+            <div
+              class="relative flex items-center justify-center overflow-hidden h-60"
+            >
               <!-- Add dynamic practice Area Image Here -->
+              <div
+                class="top-0 absolute h-28 w-full bg-black bg-opacity-50 md:bg-black md:bg-opacity-0"
+              ></div>
               <img
-                src="https://picsum.photos/600/300"
-                alt=""
+                :src="require(`~/assets/${practice.image}.jpg`)"
+                :alt="practice.title"
                 class="h-full w-full object-cover"
               />
             </div>
@@ -205,7 +210,13 @@
         </div>
         <div class="order-1 md:order-2">
           <h2>Get in Touch</h2>
-          <form class="w-full max-w-lg">
+          <form
+            name="contact-form"
+            data-netlify="true"
+            method="post"
+            data-netlify-honeypot="bot-field"
+            class="w-full max-w-lg"
+          >
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -218,6 +229,7 @@
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
+                  name="First Name"
                   placeholder="Jane"
                 />
               </div>
@@ -232,6 +244,7 @@
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
                   type="text"
+                  name="Last Name"
                   placeholder="Doe"
                 />
               </div>
@@ -247,6 +260,7 @@
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="email"
+                  name="Email"
                   type="email"
                 />
               </div>
@@ -262,6 +276,7 @@
                 <textarea
                   class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-tertiary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                   id="message"
+                  name="Message"
                 ></textarea>
               </div>
             </div>
@@ -269,7 +284,7 @@
               <div class="flex md:w-1/3 justify-center lg:justify-start">
                 <button
                   class="shadow bg-primary hover:bg-tertiary focus:shadow-outline focus:outline-none text-white font-bold py-2 md:px-4 px-12 rounded"
-                  type="button"
+                  type="submit"
                 >
                   Send
                 </button>
@@ -297,32 +312,32 @@ export default Vue.extend({
           {
             title: 'Settlement of Estate, Housing, and Land Use',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'settlement-of-estate',
           },
           {
             title: 'Civil and Family Law',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'civil-and-family-law',
           },
           {
             title: 'Corporate Housekeeping',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'corporate-housekeeping',
           },
           {
             title: 'Government Law',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'government-law',
           },
           {
             title: 'Contract Drafting and Review',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'contract-drafting',
           },
           {
             title: 'Criminal',
             description: 'LOREM IPSUM',
-            image: '',
+            image: 'criminal-law',
           },
         ],
         lawyers: [
