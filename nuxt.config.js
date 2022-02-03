@@ -4,14 +4,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'subic-law',
+    title: 'Subic Law',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Subic Law is one of the leading law firms in Olongapo City, our attorneys can help you with all of your legal needs. The firm has been engaged in general law practice for more than 15 years.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
